@@ -24,7 +24,9 @@ const HomeScreen = () => {
     <div className='home'>
       <h1>HomeScreen</h1>
       <div className='home_container'>
-        <CardList products={products} />
+        <div className='home_card-list_container'>
+          <CardList products={products} />
+        </div>
         <ShopCartList products={products} />
       </div>
     </div>
