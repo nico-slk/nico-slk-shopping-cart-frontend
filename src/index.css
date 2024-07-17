@@ -12,14 +12,8 @@
 }
 
 .app {
-  width: 100vw;
   min-height: 100vh;
-  border: solid 2px white;
   padding: 0 50px;
-}
-
-.home {
-  border: solid 2px white;
 }
 
 .home_card-list_container {
@@ -32,66 +26,121 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 50px;
-  border: solid 2px white;
 }
 
 .cart_bar {
   width: 25%;
+  position: fixed;
+  right: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
-  border: solid 2px white;
+  padding-top: 20px;
 }
 
 .cart_bar_list {
-  height: 60vh;
+  height: 55vh;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-  border: solid 2px white;
+  overflow-x: hidden;
   border-radius: 8px;
 }
+
+.cart_bar_list::-webkit-scrollbar-thumb {
+  background: rgb(133, 133, 133, 0.8);
+  border-radius: 8px;
+}
+
+.cart_bar_list::-webkit-scrollbar {
+  width: 5px;
+}
+
 
 .button_container {
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 20px;
+  justify-content: center;
 
 }
+
+.bonif_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* ---------------------- */
 
 .home_container {
   display: flex;
   flex-direction: row;
 }
 
+.buttons_title_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.buttons_users {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* ---------------------- */
+
 .card {
   min-width: 300px;
-  height: 150px;
   margin-bottom: 50px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 8px;
-  border: solid 2px white;
 }
+
+/* ---------------------- */
 
 .shop_card {
   width: 300px;
-  height: 150px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  border: solid 2px white;
 }
+
+.shop_card_image {
+  max-width: 150px;
+  height: 150px;
+}
+
+.shop_card_button {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(252, 53, 53);
+  border-radius: 8px;
+  border: none;
+}
+
+.shop_card_name,
+.shop_card_price {
+  margin: 10px 0;
+}
+
+/* ---------------------- */
 
 .global_button {
   width: 200px;
@@ -99,4 +148,29 @@
   border-radius: 8px;
   border: none;
   background-color: blueviolet;
+  margin: 10px;
+}
+
+.finish {
+  height: 40px;
+  background-color: rgb(0, 184, 15);
+}
+
+.card_add_product {
+  width: 50px;
+  height: 30px;
+  background-color: blueviolet;
+}
+
+.clear {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: rgb(189, 0, 0);
+}
+
+.config {
+  background-color: rgb(53, 53, 53, 0.8);
+  border: solid 1px rgb(119, 119, 119);
 }

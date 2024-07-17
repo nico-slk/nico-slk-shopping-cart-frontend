@@ -1,14 +1,23 @@
+import { useEffect, useState } from 'react';
 import { Product } from '../screens/HomeScreen';
+import { useStore } from '../store';
 import Card from './Card';
 
-interface Props {
-  products: Product[];
-}
 
-const CardList = ({ products }: Props) => {
+
+const CardList = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const { productList, setProductsList, addProductToCart } = useStore();
+
+  useEffect(() => {
+    setProductsList();
+    setProducts(productList);
+  }, [productList.length]);
+
   return (
     <div className='card_list'>
-      {products.map((product: Product) => <Card product={product} />)}
+      {products.map((product: Product) => <Card product={product} addProductToCart={addProductToCart} key={product.id} />)}
     </div>
   );
 };

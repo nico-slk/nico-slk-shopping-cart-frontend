@@ -1,30 +1,57 @@
-# React + TypeScript + Vite
+# Bienvenido a la aplicación CartShop en su aplicacion Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ ## Instalar dependencias
 
-Currently, two official plugins are available:
+Una vez clonado el repositorio en tu equipo, entra al proyecto y en la consola utiliza cualquiera de los siguientes comandos:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+npm install
+```
+```
+yarn install
+```
+```
+pmpm install
+```
+Elije cualquiea que te resulte mas cómodo.
 
-## Expanding the ESLint configuration
+#
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Una vez terminado de instalar las dependencias necesarias, corre el siguiente comando:
+```
+npm run dev
+```
+Para poner el marcha el frontend y comenzar a interactual desde tu navegador. Verás la siguiente información: 
+```
+VITE v5.3.3  ready in 293 ms
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+en la que el link `ttp://localhost:5173/` es la direccion de la aplicacion corriendo en tu equipo de forma local. Copia el link y pegalo en tu navegador favorito
+
+#
+
+Enseguida podras hacer las pruebas con distintos productos. Notarás que en la pagina de inicio, existen 3 botones: `Common User`, `VIP User`, `Special Day`
+
+En los cuales podras elegir entre un usuario VIP o un usuario común. Y el otro botón es para activar la fecha especial para tener el efecto necesario en el monto total en carrito si se cumplen los requerimientos.
+
+#### Si hay exactamente 4 productos
+Si tu carrito de compras, tiene exactamente 4 productos. Verás que tendrás un descuento del -25%
+
+#### Si hay exactamente 4 productos
+Si el carrito es común se hará un descuento de $100.\
+Si el carrito es promocionable por fecha especial se hace un descuento general de $300.\
+Si el carrito es vip, se bonifica el producto más barato y se hace un descuento general de $500
+
+Si el cliente en un determinado mes, realizó compras por más de $10.000, pasa a ser
+considerado VIP en su próxima compra. (considerar el valor de lo que realmente paga el
+cliente por los carritos luego de aplicarle los descuentos)
+
+Si el cliente en un determinado mes, no realizó compras, deja de ser VIP si lo era
+
+ 
+
+[Repositorio backend](https://github.com/nico-slk/nico-slk-shopping-cart-backend)

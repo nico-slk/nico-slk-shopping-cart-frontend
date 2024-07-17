@@ -1,7 +1,8 @@
+import { ToBuy } from '../utils/util';
 
-export const createCart = async (body: unknown) => {
+export const createCart = async (body: ToBuy) => {
   try {
-    const fetchCart = await fetch(`localhost:8090/api/cart/`, {
+    const fetchCart = await fetch(`http://localhost:8090/api/cart/`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -11,6 +12,6 @@ export const createCart = async (body: unknown) => {
     });
     return await fetchCart.json();
   } catch (error) {
-    throw new Error("Error at create cart.");
+    throw new Error("Error at create cart." + error);
   }
 };
